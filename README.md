@@ -9,9 +9,9 @@ After each guess, the program gives hints like:
 
 * Too High
 * Too Low
-  The game continues until the correct number is guessed.
+  The game continues until 10 attempts
 
-This project is beginner-friendly and helps in understanding Python basics like loops, conditions, and user input.
+This project is beginner-friendly and helps in understanding Python basics like loops, conditions, error handling and user input.
 
 ---
 
@@ -22,6 +22,8 @@ This project is beginner-friendly and helps in understanding Python basics like 
 * Hint system (High / Low)
 * Counts number of attempts
 * Simple and interactive gameplay
+* error handling
+* limited attempts upto 10
 
 ---
 
@@ -29,6 +31,7 @@ This project is beginner-friendly and helps in understanding Python basics like 
 
 * Python 3
 * Random module
+* error handling
 
 ---
 
@@ -58,13 +61,13 @@ python number_guessing.py
 * Using conditional statements (`if-elif-else`)
 * Working with user input
 * Using Python’s `random` module
+* error handling(`try,except`)
 
 ---
 
 ## 🚀 Future Improvements
 
 * Add difficulty levels (Easy/Medium/Hard)
-* Limit number of attempts
 * Add a restart option
 * Create a GUI version using Tkinter
 
