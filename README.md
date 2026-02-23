@@ -1,49 +1,59 @@
-# number-guessing-game--python
 # Number Guessing Game (Python)
 
-## 📌 Project Description
-
-This is a simple Python-based Number Guessing Game.
-The computer randomly selects a number, and the player has to guess it.
-After each guess, the program gives hints like:
-
-* Too High
-* Too Low
-  The game continues until the correct number is guessed.
-
-This project is beginner-friendly and helps in understanding Python basics like loops, conditions, and user input.
+A simple Python-based Number Guessing Game where the computer selects a random number between 1 and 100, and the user has 10 attempts to guess it correctly.
 
 ---
 
-## 🎯 Features
+## Project Description
 
-* Random number generation
-* User input handling
-* Hint system (High / Low)
-* Counts number of attempts
-* Simple and interactive gameplay
+This is a command-line game built using Python. The program generates a random number, and the player tries to guess it within a limited number of attempts.
+
+The game provides hints after each guess:
+
+* If the guess is too low → asks to increase the number
+* If the guess is too high → asks to decrease the number
+* If guessed correctly → shows the number of attempts taken
+
+The program also handles invalid inputs (like text or numbers outside the range).
 
 ---
 
-## 🛠️ Technologies Used
+## Features
+
+* Random number generation using Python's `random` module
+* Maximum 10 attempts
+* Hints after each guess (Higher / Lower)
+* Input validation
+
+  * Handles non-numeric input
+  * Ensures number is between 1 and 100
+* Displays the correct number if the player loses
+
+---
+
+## Technologies Used
 
 * Python 3
 * Random module
+* Command-line interface
 
 ---
 
-## ▶️ How to Run the Program
+## How to Run the Project
 
-1. Install Python (if not installed)
+1. Clone the repository
 
-   * Download from: https://www.python.org/
+```
+git clone https://github.com/your-username/number-guessing-game.git
+```
 
-2. Save the program file
-   Example: `number_guessing.py`
+2. Navigate to the project folder
 
-3. Open terminal or command prompt
+```
+cd number-guessing-game
+```
 
-4. Run the program:
+3. Run the Python file
 
 ```
 python number_guessing.py
@@ -51,25 +61,54 @@ python number_guessing.py
 
 ---
 
+## Game Rules
 
-## 📚 Learning Outcomes
+* The computer selects a number between **1 and 100**
+* You have **10 attempts** to guess the correct number
+* After each guess:
 
-* Understanding loops (`while`)
-* Using conditional statements (`if-elif-else`)
-* Working with user input
-* Using Python’s `random` module
+  * If your guess is low → You will be asked to increase the number
+  * If your guess is high → You will be asked to decrease the number
+* If you fail after 10 attempts, the correct number will be displayed
 
 ---
 
-## 🚀 Future Improvements
+## Example Output
+
+```
+Welcome to Number Guessing Game
+You have 10 attempts
+
+Enter your choice from 1 to 100: 50
+Your guess is lower. Attempts left: 9
+
+Enter your choice from 1 to 100: 75
+Your guess is higher. Attempts left: 8
+```
+
+---
+
+## Folder Structure
+
+```
+number-guessing-game/
+│
+├── number_guessing.py
+└── README.md
+```
+
+---
+
+## Author
+
+Raj Yadav
+B.Tech Student | Python Beginner
+
+---
+
+## Future Improvements
 
 * Add difficulty levels (Easy/Medium/Hard)
-* Limit number of attempts
-* Add a restart option
-* Create a GUI version using Tkinter
-
----
-
-## 📄 License
-
-This project is open-source and free to use for learning purposes.
+* Add graphical interface (GUI)
+* Add score tracking system
+* Add replay option
