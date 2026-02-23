@@ -1,20 +1,40 @@
-#importing random module
 import random
-#defining variable to count in how many attempts user guess the correct answer
-attempt=0
-#taking random value from random module (between 1 to 100) and storing in a variable
-computer_value=random.randint(1,100)
-#using while loop
-while True:
-    #taking input from user
-    user_input=int(input("Enter your choice: "))
-    #counting atempts of user take to guess the correct answer
-    attempt+=1
-    #checking conditions using if-elif-else conditional statements
-    if(user_input<computer_value):
-        print("your choice is smaller then actual number increase your number")
-    elif(user_input>computer_value):
-        print("your choice is greater then actual number decrease your number")
+
+computer_guess = random.randint(1, 100)
+attempts = 0
+
+def number_guessing_game(user_guess, attempts):
+    attempts += 1
+    
+    if user_guess == computer_guess:
+        print(f"Guessed it correct in {attempts} attempts")
+        return attempts, True
+    elif user_guess < computer_guess:
+        print(f"Your guess is lower. Attempts left: {10 - attempts}")
     else:
-        print(f"you guessed it correct in {attempt} attempts ")
+        print(f"Your guess is higher. Attempts left: {10 - attempts}")
+        
+    return attempts, False
+
+
+print("Welcome to Number Guessing Game")
+print("You have 10 attempts")
+
+for i in range(10):
+    try:
+        user_guess = int(input("Enter your choice from 1 to 100: "))
+        
+        if user_guess < 1 or user_guess > 100:
+            print("Please enter a number between 1 and 100")
+            continue
+            
+    except ValueError:
+        print("Invalid input! Please enter a number only.")
+        continue
+    
+    attempts, correct = number_guessing_game(user_guess, attempts)
+    
+    if correct:
         break
+else:
+    print(f"You lost! The number was {computer_guess}")
